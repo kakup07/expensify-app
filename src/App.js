@@ -33,22 +33,12 @@ store.dispatch(addExpense({
 
 
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
-
-
+  
   return (
     <Provider store={store}>
-      <div>
-        <h1>{data}</h1>
+      
         <AppRouter />
-      </div>
+    
     </Provider>
     
 )}
